@@ -51,10 +51,11 @@ export default {
     msg: String
   },
   methods: {
-    handlePageData(){      
+    handlePageData(){
+      const { currentPage, pageSize } = this.pageInfo
       this.tableData = this.mockData.slice(
-        (this.pageInfo.currentPage - 1) * this.pageInfo.pageSize,
-        this.pageInfo.currentPage * this.pageInfo.pageSize
+        (currentPage - 1) * pageSize,
+        currentPage *pageSize
       )
     },
     handleSizeChange(val) {
