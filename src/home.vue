@@ -6,18 +6,23 @@
     <el-card>
       <LineBar :chartOptions="chartOptions"/>
     </el-card>
+    <el-card>
+      <JsonToExcel />
+    </el-card>
   </div>
 </template>
 
 <script>
 import CommonTable from './components/table'
 import LineBar from './components/chartLineBar'
+import JsonToExcel from './components/jsonToExcel/jsonToExcel'
 
 export default {
   name: 'Home',
   components: {
     CommonTable,
-    LineBar
+    LineBar,
+    JsonToExcel
   },
   data() {
     return {
