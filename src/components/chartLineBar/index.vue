@@ -1,8 +1,6 @@
 <template>
   <div class="chart-container">
     <chart 
-      height="100%" 
-      width="100%"
       :chartOptions="chartOptions"
     />
   </div>
@@ -17,17 +15,9 @@ export default {
   props: {
     chartOptions: {
       type: Object,
-      default: {}
+      default: () => {}
     }
   }
 }
 </script>
-
-<style scoped>
-.chart-container{
-  position: relative;
-  width: 100%;
-  height: 300px;
-}
-</style>
 

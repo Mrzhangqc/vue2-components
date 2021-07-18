@@ -46,10 +46,7 @@
 </template>
 <script>
 export default {
-  name: 'Table',
-  props: {
-    msg: String
-  },
+  name: 'page-table',
   methods: {
     handlePageData(){
       const { currentPage, pageSize } = this.pageInfo

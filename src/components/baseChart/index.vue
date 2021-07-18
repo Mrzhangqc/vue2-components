@@ -35,9 +35,7 @@ export default {
   props: {
     chartOptions:{
       type: Object,
-      default: {
-        series: []
-      }
+      default: () => {}
     },
     className: {
       type: String,
@@ -49,11 +47,11 @@ export default {
     },
     width: {
       type: String,
-      default: '200px'
+      default: '300px'
     },
     height: {
       type: String,
-      default: '200px'
+      default: '300px'
     }
   },
   data() {
@@ -77,7 +75,7 @@ export default {
     this.resizeHandler = null
   },
   watch: {
-    'chartOptions': function(newVal, oldVal){
+    'chartOptions': function(newVal){
       if(newVal){
         console.log('update---');
         this.chartUpdate(newVal)
